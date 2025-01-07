@@ -1,9 +1,5 @@
-
-from django.shortcuts import render 
+from django.shortcuts import render
 
 def Home_Page(request):
-   return  render(request,'about.html')
-
-
-
-
+    # Chargez la page HTML (sans appel récursif)
+    return render(request, 'index.html')

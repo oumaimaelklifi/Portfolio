@@ -1,105 +1,14 @@
-<!DOCTYPE html>
+
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+ 
+
     <link href="https://fonts.googleapis.com/css2?family=Paprika&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title>Oumaima El Khlifi</title>
+   
     <style>
 
-        *{
-            padding: 0%;
-            margin: 0%;
-            list-style: none;
-            font-family: Paprika; 
-            box-sizing: border-box;
-            text-decoration: none;  
-          
-        }
-
-        html{
-            scroll-behavior: smooth;
-        }
-
-        .social_media{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-        .social_media i:hover{
-            color: #007aff;
-        }
-            
-        .social_media i{
-            font-size: 24px;
-            color: black;
         
-        }
-
-        .navbar {
-      
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 56px;
-          
-        }
-
-        .nav {
-            display: flex;
-        }
-        
-        .menu-sec ul{
-            display: flex;
-            gap: 30px;
-    
-        }
-        
-        .menu-sec ul li a {
-            color: #1c3468;
-            
-        }
-      
-        .menu-sec ul li a:hover {
-            font-weight: 700;
-        }
-
-
-        section{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 600px;
-            color:#1c3468;
-            gap: 70px;
-            background-color: rgb(140, 147, 160);
-             /* background-image: url("{% static 'assets/background1.png' %}"); */
-             background-repeat: no-repeat;
-             background-size: cover;
-            
-            background-color: rgb(252, 252, 252);
-
-           
-        }
-        .experience{
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: 40px;
-        }
-
-        .informations_personlles h1{
-           text-transform: uppercase;  
-           text-align: center;  
-           letter-spacing: 1px;
-        }
-
         .informations_personlles span{
             color: #007aff;
             font-weight: 800;
@@ -132,7 +41,7 @@
             
         }
         .Paragraphe {
-           
+
             padding: 20px 20px;
             border: 2px solid #1c3468;
             text-decoration-line: none;
@@ -144,9 +53,9 @@
             height: 550px;
         }
         .Paragraphe p{
-            font-size: 15px;
-            color: #11203f;
-            font-family:'Sans Serif';
+            font-size: 17px;
+            color: #898989;
+            font-family: 'Poppins';
             line-height: 1.6;
         }
 
@@ -159,74 +68,33 @@
 
         .more_about_me{
             background-color: #11203f;
-            color: white;
-            font-size: 17px;
             padding: 10px 35px;
-            text-align: center;
-            font-weight: 700;
             border: none;
             font-family: 'Sans Serif';
-            margin-top: 15px;
             border-radius: 4px;
-            border-bottom-right-radius: 20px;
-        
-
-
+            border-bottom-right-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
         }
+        .more_about_me a{
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Poppins';
+            font-weight: 900;
+        }
+
+
+     
+       
 
     </style>
 </head>
 <body>
-    <!-- <div class="navbar ">
-        <div class="name">
-            <h4 >Oumaima Elkhlifi.</h4>
-        </div>
-  
-        <div id="menuSection" class="menu-sec">
-          <ul class="nav">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Skills</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Project</a></li>
-            <li><a href="">Conatct</a></li>
-          </ul>
-        </div>
-        <div class="social_media">
-            <a href="https://github.com/yourusername"  target="_blank">
-                <i class="fab fa-github"></i> 
-            </a>
-            <a href="https://www.linkedin.com/in/yourusername" >
-                <i class="fab fa-linkedin"></i> 
-            </a>
-        </div>
-      </div> -->
-     
-       
-    <section >
-       <div class="informations_personlles">
-            <h1 style="margin-bottom: 7px;"><span>Oumaima</span> Elkhlifi</h1>
-            <h1 style="font-size: 25px;"> Geoinformation Student / wWeb Development </h1>
-            <div class="experience" >
-                <h1>+2</h1>
-                <div>
-                    <p>Years of Experience in Web</p>
-                    <p>development And Cloud</p>
-                </div>
-           </div>
-           <div class="project">
-              <p>Projects Worked in my career <span style="font-size: 25px;font-weight: 800;color: #1c3468;"> &nbsp;&nbsp; +10</span></p>
-             
-    
-           </div>
-       </div>
-       <div class="Image ">
-        <img src="{% static '/assets/image.png' %}" alt="nn">
-       </div>
-    </section>
 
     <article>
-        <div class="about">
+        <div class="about" id="About">
             <div class="title">
                 <h3  class="aboutme">About Me</h3>
                 <p>Hello Dear,This is a brief introduction about me</p>
@@ -235,14 +103,17 @@
                 <img src="{% static '/assets/image.png' %}" alt="nn">
             <div class="Paragraphe">
                 
-                <p>Hello, I'm A Full-stack Web developer
-                    My name is MECHHOUR ACHRAF , and I am a highly skilled Web full-stack developer proficient in both front-end and back-end development. I have the ability to create dynamic and user-friendly web applications with exceptional features. I am adept at setting up efficient databases to ensure smooth data management. As a dedicated and hardworking team player, I consistently deliver outstanding results. <br>I am passionate about staying updated on the latest technologies and industry best practices.
+                <p>Hello, I'm Ouaima El Khlifi, a Geoinformation student with a growing interest in web development.
+                    I enjoy building interactive, user-friendly web applications while integrating geospatial data for impactful visualizations.
+                    I am passionate about leveraging both GIS and web technologies to create innovative solutions for real-world challenges.
+                   
                 </p>
-                <button class="more_about_me">More information</button>
-            </div></div>
-
+                <button class="more_about_me"><a href="your-cv.pdf" download >More Information</a></button>
         </div>
+
     </article>
-  
+
+    
+    
 </body>
 </html>
