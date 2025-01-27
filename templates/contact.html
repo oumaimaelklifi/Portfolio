@@ -1,247 +1,93 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
+{% load static %}
+
+<heaD>
+    <!-- Include AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style>
-               
-                .footer i {
-                    color: #1c3b8c;
-                }
-                        
+        *{ font-family: 'Poppins';
 
-                .footer .footer-items{
-                    display: flex;
-                    margin-top: 30px;
-                    gap: 30px;
-                display: flex;
-                justify-content: center;
-                
-                }
+        }
+        footer {
+            background-color: #021640;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
+        .contact_me h2{
+            font-weight: 900;
+        }
+        i{
+            font-size: 30px;
+            
+        }
 
-                .footer .footer-items .items{
-                    background-image: url("{% static 'images/bgg.png' %}");
-                    width: 25%;
-                    border-radius: 3px;
-                    padding: 32px;
-                    border-bottom: 4px solid transparent;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-
-                }
-
-
-                .footer .footer-items .items p{
-                    margin-top: 8px;
-                    font-size: 14px;
-                    line-height: 22px;
-                    color: #495057;
-                    font-weight: 500;
-                }
-
-                .skill {
-                text-align: center;
-                
-                padding-left: 30px;
-                padding-right: 30px;
-                padding-bottom: 30px;
-                padding-top: 50px;
-                margin-top: 10px;
-                
-                
-                }
-
-
-                .items{
-                    display: flex;
-                    align-items: center;
-                    gap: 17px;
-                
-                }
-                .items i{
-                font-size: 20px;
-                }
-                .titre{
-                    padding-bottom:16px ;
-                    text-align: center;
-                    font-size: 37px;
-                    padding-top: 40px;
-                
-
-                }
-                .para{
-                    padding-left: 100px;
-                    padding-right: 100px;
-                    color: #495057;
-                    text-align: center;
-                }
-                .footer_message{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-top: 30px;
-                    padding-bottom: 30px;
-                }
-                .firstinput input{
-                    width: 250px;
-                    height: 40px;
-                    border: 1px solid #dee2e6;
-                    padding-left: 10px;
-                    border-radius: 3px;
-                    margin-right: 12px;
-                    border-left: #1c3b8c 3px solid;
-                }
-                .firstinput input , .phone::placeholder{
-                    color: #495057;
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-              .firstinput input:focus {
-                outline: none;
-                box-shadow: none; 
-                border-color: initial; 
-            }
-           
-            .phone , textarea{
-                width: 517px;
-                height: 40px;
-                border: 1px solid #dee2e6;
-                padding-left: 13px;
-                border-radius: 3px;
-                margin-right: 12px;
-                border-left: #1c3b8c 3px solid;
-               
-                
-            }
-           .phone{
-            margin-top: 20px;
-            }
-            textarea{
-                height: 90px;
-                padding-top: 10px;
-                padding-left: 10px;
-            }
-            iframe{
-                width: 500px;
-                height: 260px;
-            }
+       
+        input ,textarea{
+            width: 350px;
+            border: 1px solid rgb(168, 168, 168);
+            border-radius: 5px;
+            padding: 10px;
+            height: 50px;
+            margin-bottom: 12px;
+        }
+        input::placeholder{
+            color: gray;
+        }
+        textarea{
+            height: 100px;
+        }
+        .envoyer{
+            background-color: white;
+            width: 130px;
+            color: #021640;
          
-            input[type="submit"] {
-                background-color: #1c3b8c;
-                color: white; 
-                padding: 10px 20px; 
-                border: none; 
-                border-radius: 4px; 
-                font-size: 16px; 
-                cursor: pointer; 
-                transition: background-color 0.3s ease; 
-                
-            }
-
-            input[type="submit"]:hover {
-                background-image: none;
-                background-image: url("{% static 'images/bgg.png' %}");
-                color: black;
-                font-size: 16px;
-                font-weight: 590;
-            }
-            .newsletter{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                background-image: url("{% static 'images/bgg.png' %}");
-                margin-top: 20px;
-                padding-left: 30px;
-                padding-right: 30px;
-                padding-top: 70px;
-                padding-bottom: 70px;
-                margin-right: 30px;
-                margin-left: 30px;
-                
-                
-            }
-            .newsletter h1 , p{
-                text-align: center;
-            }
-            .newsletter p{
-                color: #495057;
-            }
-            .emailnewsletter{
-                width: 300px;
-                height: 50px;
-                border: 1px solid #dee2e6;
-                padding-left: 13px;
-                border-radius: 3px;
-                margin-right: 12px;
-                border-left: #1c3b8c 3px solid;
-               
-            }
-
+            border-radius: 5px 5px 24px 5px;
+        }
+       
     </style>
-   
-</head>
+</heaD>
+
 <body>
-   
-        <section class="footer" >
+    <footer>
+        <div class="contact_me text-center mb-5 mt-5 font-black">
+            <h2 data-aos="fade-down" class="aos-animate aos-init" >Contact me </h2>
+            <h2  class="touch aos-animate aos-init"  data-aos="fade-down">LET'S GET IN TOUCH</h2>
+        </div>
+        <div class="contact mt-2 d-flex gap-10 justify-center" id="contact" >
+
             
-            <h3 class="titre"> Contact </h3>
-            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim 
-               .</p>
-            <div class="footer-items" style="text-align: center;"> 
-                <div class="items">
-                    <i class="fa-solid fa-phone"></i>
-                    <div class="Contact">
-                      <h4>Our Phone</h4>
-                      <p>+ 212 (0) 5 39 39 39 54 / 55</p>
-                    </div>
-                </div>
-                <div class="items">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div class="Contact">
-                      <h4>Our home adresse</h4>
-                      <p>Boukhalef , Tanger</p>
-                    </div>
-                </div>
-                <div class="items">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div class="Contact">
-                       <h4>Our email adresse</h4>
-                       <p>administration.fstt@uae.ac.ma</p>
-                     </div>
-                </div>
-            </div>
-        </section>
-        <article class="footer_message">
-        <div class="input ">
-          <div class="firstinput">
-            <input type="text" placeholder="Your name" name="name">
-            <input type="email" placeholder="Your email" name="email">
-          </div>
-          <input type="number" placeholder="Your phone" name="phone" class="phone"> <br>
-          <textarea name="message" id="" >Enter your message</textarea> <br>
-          <input type="submit" value="Send">
-         </div>
-         <div class="localisation">
-            
-            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28383.938938375115!2d-5.903399510528039!3d35.725033716005115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b87d71f995045%3A0xc35a87c33b565280!2sFacult%C3%A9%20des%20sciences%20et%20techniques%20de%20Tanger!5e0!3m2!1sfr!2sma!4v1704136231951!5m2!1sfr!2sma" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
-         </div>
+          
+            <form  class="champs d-flex flex-column  p-1" data-aos="fade-up" method="post">
+                {% csrf_token %}
+        
+                <input type="text" name="name" placeholder="Name" class="focus:outline-none aos-animate aos-init" data-aos="fade-up">
+                <input type="email" name="email" placeholder="Email" class="focus:outline-none aos-animate aos-init"data-aos="fade-up">
+                <textarea name="Message" placeholder="Message" class="focus:outline-none aos-animate aos-init" data-aos="fade-up"></textarea>
+                <button type="submit" class="border-1 border-none  p-2 envoyer  font-bold  " >Submit</button>
+         
+            </form>
+        
 
-        </article>
-        <section class="newsletter">
-            <div class="paranewsletter">
-                <h1>
-                    Our Newsletter to Subscribe
-                </h1>
-                <p>Dantes remained confused and silent by this explanation of the,</p>
-                <p>consectetur adipisic eli</p>
-            </div>
-            <div>
-                <input type="email" placeholder="email" class="emailnewsletter">
-                <input type="submit" value="Submit">
-            </div>
+           <div class="conatct_information  aos-animate aos-init" data-aos="fade-up">
+          
+                <p  class="" > <i class="fab fa-github"></i> oumaimaelkhlifi2003@gmail.com</p>
+                
+                <p class="mb-3 "  ><i class="fab fa-github"></i> +212 625162443</p>
+                
+                <p class=""  ><i class="fab fa-github"></i> oumaimaelkhlifi</p>
+     
+                <p  class="" ><i class="fab fa-linkedin"></i> oumaimaelkhlifi</p>
 
-        </section>
+           </div>
+           
+        </div>
+       
 
+    </footer> 
+    <script>
+  
+        AOS.init();
+    </script>
 </body>
-</html> -->
+</html>

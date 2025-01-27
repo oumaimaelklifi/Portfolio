@@ -1,6 +1,8 @@
 <html lang="en">
 {% load static%}
 <head>
+     <!-- Include AOS JS -->
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -22,6 +24,11 @@
       
         .hire-card {
             min-width: 250px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+           
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -37,6 +44,7 @@
         .hire-icon {
             width: 80px;
             height: 100px;
+           text-align: center;
         }
         .hire-title {
             font-size: 16px;
@@ -54,28 +62,28 @@
     </style>
 </head>
 <body >
-    <div class="container mt-5" >
-        <h2 class="h2">Why Hire Me ?</h2>
+    <div class="container mt-5"  id="services">
+        <h2 class="h2 aos-animate aos-init" data-aos="fade-up">Why Hire Me ?</h2>
         
         <div class="hire-container" >
           
-            <div class="hire-card">
+            <div class="hire-card aos-animate aos-init" data-aos="fade-down">
                 <img src="{% static '/assets/image3.png' %}"  class="  hire-icon">
                 <p class="hire-title">Comminucative</p>
                 <p class="hire-description">I balance talking and listening hence ensuring effective communication.</p>
             </div>
             
-            <div class="hire-card">
+            <div class="hire-card aos-animate aos-init" data-aos="fade-down">
                 <img src="{% static '/assets/image1.png' %}"  class="  hire-icon">
                 <p class="hire-title">Collaborative</p>
                 <p class="hire-description">Teamwork makes the dream work. Collaboration first, then work.</p>
             </div>
-            <div class="hire-card">
+            <div class="hire-card aos-animate aos-init" data-aos="fade-down">
                 <img src="{% static '/assets/image2.png' %}"  class="  hire-icon">
                 <p class="hire-title">HardWorking</p>
                 <p class="hire-description">I put myself into action to achieve my goals.</p>
             </div>
-            <div class="hire-card">
+            <div class="hire-card aos-animate aos-init" data-aos="fade-down">
                 <img src="{% static '/assets/image4.png' %}"  class="  hire-icon">
                 <p class="hire-title">Problem Solving</p>
                 <p class="hire-description">I put myself into action to achieve my goals.</p>
@@ -85,6 +93,6 @@
             </div>
             
     </div>
-
+    <script> AOS.init(); </script>
 </body>
 </html>

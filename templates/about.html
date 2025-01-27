@@ -9,24 +9,23 @@
     <style>
 
         
-        .informations_personlles span{
-            color: #007aff;
-            font-weight: 800;
-        }
+      
 
-        .project p{
-            margin-top: 40px;  
-        }
-
-        .Image img{
-            width: 300px; 
-        }
+     
+/* .about{
+    background-color: #F9FAFB;
+    padding: 30px 0px;
+}
+       */
         .aboutme{
-            margin-bottom: 7px;
+           
+            padding-top: 50px;
+          
             font-size: 30px;
             color: rgb(24, 24, 24);
             font-family:'Sans Serif';
             font-weight: 900;
+            color: #464444;
         }
         .title{
            display: flex;
@@ -45,26 +44,28 @@
             padding: 20px 20px;
             border: 2px solid #1c3468;
             text-decoration-line: none;
-            border-bottom-right-radius: 150px;
-            width: 450px;
+            /* border-bottom-right-radius: 120px; */
+            border-radius: 10px 10px 120px 10px;
+            width: 320px;
         }
+
         article{
             margin-top: 20px;
             height: 550px;
         }
         .Paragraphe p{
-            font-size: 17px;
+            font-size: 14px;
             color: #898989;
             font-family: 'Poppins';
             line-height: 1.6;
-            /* color: #464444; */
+            color: #464444;
         }
 
         .Partie2{
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             }
 
         .more_about_me{
@@ -79,32 +80,39 @@
         }
         .more_about_me a{
             color: white;
-            font-size: 16px;
+            font-size: 13px;
             text-align: center;
             text-decoration: none;
             font-family: 'Poppins';
-            font-weight: 900;
+            font-weight: 700;
+        }
+        .more_about_me:hover{
+            background-color: rgb(201, 201, 201);
+
         }
 
 
-     
+      .Partie2 img{
+        border-radius: 50%;
+        width: 350px;
+      }
        
 
     </style>
 </head>
-<body>
+<body >
 
-    <article>
-        <div class="about" id="About" >
+    <article id="About" >
+        <div class="about" >
             <div class="title">
-                <h3  class="aboutme">About Me</h3>
-                <p  data-aos="flip-up">Hello Dear,This is a brief introduction about me</p>
+                <!-- <h3  class="aboutme" id="About">About Me</h3> -->
+                <p  data-aos="flip-up" style="font-family: 'Paprika';">Hello Dear,This is a brief introduction about me</p>
             </div>
             <div class="Partie2">
-                <img src="{% static '/assets/image.png' %}" alt="nn" data-aos="flip-left">
-            <div class="Paragraphe">
+                <img src="{% static '/assets/oumaima_image-removebg-preview (1).png' %}" alt="nn" data-aos="zoom-out-right" data-aos-offset="50">
+            <div class="Paragraphe" data-aos="zoom-out-left" data-aos-offset="50">
                 
-                <p  data-aos="flip-up">Hello, I'm Ouaima El Khlifi, a Geoinformation student with a growing interest in web development.
+                <p  >Hello, I'm Ouaima El Khlifi, a Geoinformation student with a growing interest in web development.
                     I enjoy building interactive, user-friendly web applications while integrating geospatial data for impactful visualizations.
                     I am passionate about leveraging both GIS and web technologies to create innovative solutions for real-world challenges.
                    
